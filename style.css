@@ -28,6 +28,10 @@ p{
   font-size: 25px;
 }
 
+b{
+  color: #5c5c5c;
+
+}
 .left {
     width: 50%;
     display: flex;
@@ -63,6 +67,7 @@ p{
   align-items: flex-end;
   overflow-y: scroll;
   max-height: 90vh;
+  padding-right: 20px;
 
   
   -ms-overflow-style: none;  /* IE and Edge */
@@ -99,5 +104,4 @@ p{
 
 h2{
   font-size: 32px;
-  color: #404040;
 }
