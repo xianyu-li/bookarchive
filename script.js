@@ -1,39 +1,31 @@
 $(document).ready(function() {
-  let max = 0;
+  $(".book-icon").hover(function () { 
+    let bookCover = $(this).children()[0];
+    $(bookCover).show();
 
-  $(".top-left").click(function() {
-    $(".infoblock").hide();
+  }, function () {
+    let bookCover = $(this).children()[0];
+    $(bookCover).hide();
   });
-  $(".book-icon").on({
 
-    mouseover: function() {
-      let id = $(this).attr("id");
-      let cover_id = "#" + id + "Cover";
+  $(".book-archive").click(function () {
+    $(".infoblock").hide();
+    $(".about").show();
+  });
 
-      // $(".infoblock").hide();
+  $(".books").click(function (e) {
+    let target = $( e.target );
 
-      max++;
-      
-      // special random values to make sure book covers stay in view
-      // change the value that's multiplied by Math.random() to change the random position of the book covers
-      let randomX = Math.floor(Math.random() * 20) + 50;
-      let randomY = Math.floor(Math.random() * 40) + 5;
+    if(target.is( "img" )){
+      let bookInfoId = $(target).attr("id") + "Info";
 
-      // setting the position of the book cover
-      $(cover_id).css("left", randomX.toString() + "%");
-      $(cover_id).css("top", randomY.toString() + "%");
-
-      // moving the book cover to the top and showing it
-      $(cover_id).css("z-index", max);
-      $(cover_id).show();
-    },
-
-    click: function() {
-      let id = $(this).attr("id");
-      let info_id = "#" + id + "Info";
+      $(".about").hide();
 
       $(".infoblock").hide();
-      $(info_id).show();
+      $("#" + bookInfoId).show();
+    } else {
+      $(".infoblock").hide();
+      $(".about").show();
     }
   });
 });
