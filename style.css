@@ -25,7 +25,9 @@ hr.vertical {
 }
 
 p{
-  font-size: 25px;
+  font-size: 18px;
+  color: #302f2f;
+  padding-top: 15px;
 }
 
 b{
@@ -87,7 +89,7 @@ b{
 }
 
 .book-icon {
-  background-color: black;
+  background-color: #302f2f;
   width: 114px;
   height: 151px;
 }
@@ -96,12 +98,18 @@ b{
   display: none;
   position: absolute;
   background-color: white;
-  width: 100%;
+  width: 45vw;
   height: 100%;
   z-index: 999;
   padding-left: 20px;
-}
+  }
 
+h1{
+  font-weight: 500;
+  font-size: 24px;
+
+}
 h2{
-  font-size: 32px;
+  font-size: 24px;
+  font-weight: 500;
 }
